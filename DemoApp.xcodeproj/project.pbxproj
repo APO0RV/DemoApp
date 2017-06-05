@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E5389F411EE535D600FE4934 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5389F401EE535D600FE4934 /* Manager.swift */; };
+		E5389F431EE537C600FE4934 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5389F421EE537C600FE4934 /* FirstViewController.swift */; };
 		E571B7121EE18A6A0046B3EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571B7111EE18A6A0046B3EE /* AppDelegate.swift */; };
 		E571B7141EE18A6A0046B3EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571B7131EE18A6A0046B3EE /* ViewController.swift */; };
 		E571B7171EE18A6B0046B3EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E571B7151EE18A6B0046B3EE /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		E5389F401EE535D600FE4934 /* Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		E5389F421EE537C600FE4934 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		E571B70E1EE18A6A0046B3EE /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E571B7111EE18A6A0046B3EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E571B7131EE18A6A0046B3EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			children = (
 				E571B7111EE18A6A0046B3EE /* AppDelegate.swift */,
 				E571B7131EE18A6A0046B3EE /* ViewController.swift */,
+				E5389F421EE537C600FE4934 /* FirstViewController.swift */,
 				E5389F401EE535D600FE4934 /* Manager.swift */,
 				E571B7151EE18A6B0046B3EE /* Main.storyboard */,
 				E571B7181EE18A6B0046B3EE /* Assets.xcassets */,
@@ -207,6 +210,7 @@
 				E571B7141EE18A6A0046B3EE /* ViewController.swift in Sources */,
 				E5389F411EE535D600FE4934 /* Manager.swift in Sources */,
 				E571B7121EE18A6A0046B3EE /* AppDelegate.swift in Sources */,
+				E5389F431EE537C600FE4934 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
