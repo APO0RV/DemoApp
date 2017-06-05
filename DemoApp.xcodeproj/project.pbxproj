@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E5389F411EE535D600FE4934 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5389F401EE535D600FE4934 /* Manager.swift */; };
 		E571B7121EE18A6A0046B3EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571B7111EE18A6A0046B3EE /* AppDelegate.swift */; };
 		E571B7141EE18A6A0046B3EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E571B7131EE18A6A0046B3EE /* ViewController.swift */; };
 		E571B7171EE18A6B0046B3EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E571B7151EE18A6B0046B3EE /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E5389F401EE535D600FE4934 /* Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		E571B70E1EE18A6A0046B3EE /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E571B7111EE18A6A0046B3EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E571B7131EE18A6A0046B3EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			children = (
 				E571B7111EE18A6A0046B3EE /* AppDelegate.swift */,
 				E571B7131EE18A6A0046B3EE /* ViewController.swift */,
+				E5389F401EE535D600FE4934 /* Manager.swift */,
 				E571B7151EE18A6B0046B3EE /* Main.storyboard */,
 				E571B7181EE18A6B0046B3EE /* Assets.xcassets */,
 				E571B71A1EE18A6B0046B3EE /* LaunchScreen.storyboard */,
@@ -202,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E571B7141EE18A6A0046B3EE /* ViewController.swift in Sources */,
+				E5389F411EE535D600FE4934 /* Manager.swift in Sources */,
 				E571B7121EE18A6A0046B3EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,6 +414,7 @@
 				E571B72D1EE18A6C0046B3EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E571B72E1EE18A6C0046B3EE /* Build configuration list for PBXNativeTarget "DemoAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +423,7 @@
 				E571B7301EE18A6C0046B3EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
