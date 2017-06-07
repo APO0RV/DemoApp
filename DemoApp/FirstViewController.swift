@@ -35,6 +35,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         user.firstName = ""
         user.lastName = ""
         self.users .append(user)
+        varCount = self.users.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -47,13 +48,16 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if indexPath.row < varCount {
             cellId = "cellIdentifier"
             let cell1 = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! TableViewCell
-            cell1.firstNameTextField.text = ""
+            cell1.contentView.tag = indexPath.row
+            let user = self.users[indexPath.row]
+            cell1.firstNameTextField.text = user.firstName
+            cell1.lastNameTextField.text = user.lastName
             return cell1
         } else {
             cellId = "cell2"
             let cell2 = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! AddTableViewCell
             cell2.addButonTapped = { [weak self] (cell) in
-                self?.varCount = (self?.varCount)! + 1
+                self?.addNewUser()
                 self?.tableView.reloadData()
             }
             cell2.doneButonTapped = { [weak self] (cell) in
@@ -72,7 +76,11 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        
+        let index = textField.superview?.tag
+        let cell = tableView.cellForRow(at: NSIndexPath(row: index!, section: 0) as IndexPath) as! TableViewCell
+        var user = self.users[index!]
+        user.firstName = cell.firstNameTextField.text
+        user.lastName = cell.lastNameTextField.text
     }
     
 //    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

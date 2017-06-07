@@ -31,7 +31,7 @@ struct Four {
     var lastName:String?
 }
 
-struct User {
+class User {
     var firstName:String?
     var lastName:String?
 }
