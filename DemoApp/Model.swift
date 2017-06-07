@@ -34,4 +34,11 @@ struct Four {
 class User {
     var firstName:String?
     var lastName:String?
+    var crews = [Crew]()
 }
+
+class Crew {
+    var firstName:String?
+    var lastName:String?
+}
+

@@ -15,14 +15,18 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     var varCount = 1
-    var users = [User]()
+    var user = User()
+    var crews = [Crew]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         print(appDelegate.myStruct.firstName! + " " + appDelegate.myStruct.lastName!)
-        addNewUser()
+        
+        user.firstName = "Apoorv"
+        user.lastName = "Srivastava"
+        addNewCrew()
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,12 +34,12 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Dispose of any resources that can be recreated.
     }
     
-    func addNewUser() {
-        var user = User()
+    func addNewCrew() {
+        let crew = Crew()
         user.firstName = ""
         user.lastName = ""
-        self.users .append(user)
-        varCount = self.users.count
+        self.crews .append(crew)
+        varCount = self.crews.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,15 +53,15 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             cellId = "cellIdentifier"
             let cell1 = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! TableViewCell
             cell1.contentView.tag = indexPath.row
-            let user = self.users[indexPath.row]
-            cell1.firstNameTextField.text = user.firstName
-            cell1.lastNameTextField.text = user.lastName
+            let crew = self.crews[indexPath.row]
+            cell1.firstNameTextField.text = crew.firstName
+            cell1.lastNameTextField.text = crew.lastName
             return cell1
         } else {
             cellId = "cell2"
             let cell2 = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! AddTableViewCell
             cell2.addButonTapped = { [weak self] (cell) in
-                self?.addNewUser()
+                self?.addNewCrew()
                 self?.tableView.reloadData()
             }
             cell2.doneButonTapped = { [weak self] (cell) in
@@ -78,9 +82,12 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func textFieldDidEndEditing(_ textField: UITextField) {
         let index = textField.superview?.tag
         let cell = tableView.cellForRow(at: NSIndexPath(row: index!, section: 0) as IndexPath) as! TableViewCell
-        var user = self.users[index!]
-        user.firstName = cell.firstNameTextField.text
-        user.lastName = cell.lastNameTextField.text
+        let crew = self.crews[index!]
+        crew.firstName = cell.firstNameTextField.text
+        crew.lastName = cell.lastNameTextField.text
+        
+        appDelegate.user = self.user
+        print(appDelegate.user)
     }
     
 //    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
