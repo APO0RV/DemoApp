@@ -16,7 +16,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     var varCount = 1
     var user = User()
-    var crews = [Crew]()
+//    var crews = [Crew]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,8 +38,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let crew = Crew()
         user.firstName = ""
         user.lastName = ""
-        self.crews .append(crew)
-        varCount = self.crews.count
+        self.user.crews .append(crew)
+        varCount = self.user.crews.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -53,7 +53,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             cellId = "cellIdentifier"
             let cell1 = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! TableViewCell
             cell1.contentView.tag = indexPath.row
-            let crew = self.crews[indexPath.row]
+            let crew = self.user.crews[indexPath.row]
             cell1.firstNameTextField.text = crew.firstName
             cell1.lastNameTextField.text = crew.lastName
             return cell1
@@ -82,7 +82,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func textFieldDidEndEditing(_ textField: UITextField) {
         let index = textField.superview?.tag
         let cell = tableView.cellForRow(at: NSIndexPath(row: index!, section: 0) as IndexPath) as! TableViewCell
-        let crew = self.crews[index!]
+        let crew = self.user.crews[index!]
         crew.firstName = cell.firstNameTextField.text
         crew.lastName = cell.lastNameTextField.text
         
