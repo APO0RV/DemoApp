@@ -10,7 +10,8 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var button: UIButton!
     
     

@@ -30,3 +30,8 @@ struct Four {
     var firstName:String?
     var lastName:String?
 }
+
+struct User {
+    var firstName:String?
+    var lastName:String?
+}

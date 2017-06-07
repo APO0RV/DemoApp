@@ -8,24 +8,33 @@
 
 import UIKit
 
-class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     var varCount = 1
+    var users = [User]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         print(appDelegate.myStruct.firstName! + " " + appDelegate.myStruct.lastName!)
+        addNewUser()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func addNewUser() {
+        var user = User()
+        user.firstName = ""
+        user.lastName = ""
+        self.users .append(user)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,6 +47,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if indexPath.row < varCount {
             cellId = "cellIdentifier"
             let cell1 = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! TableViewCell
+            cell1.firstNameTextField.text = ""
             return cell1
         } else {
             cellId = "cell2"
@@ -46,19 +56,26 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 self?.varCount = (self?.varCount)! + 1
                 self?.tableView.reloadData()
             }
+            cell2.doneButonTapped = { [weak self] (cell) in
+                self?.view.endEditing(true)
+            }
             return cell2
         }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row < varCount {
-            return 127
+            return 164
         } else {
             return 58
         }
     }
-
-    func addButtonTapped(sender : UIButton){
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
         
     }
+    
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//
+//    }
 }

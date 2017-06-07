@@ -13,6 +13,7 @@ class AddTableViewCell: UITableViewCell {
     @IBOutlet weak var addButton: UIButton!
     
     var addButonTapped: ((UITableViewCell) -> Void)?
+    var doneButonTapped: ((UITableViewCell) -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,4 +29,9 @@ class AddTableViewCell: UITableViewCell {
     @IBAction func addButonClicked(_ sender: Any) {
         addButonTapped?(self)
     }
+    
+    @IBAction func doneButonClicked(_ sender: Any) {
+        doneButonTapped?(self)
+    }
+    
 }
