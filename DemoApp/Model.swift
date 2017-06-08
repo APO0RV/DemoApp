@@ -40,5 +40,6 @@ class User {
 class Crew {
     var firstName:String?
     var lastName:String?
+    var imageURL:String?
 }
 

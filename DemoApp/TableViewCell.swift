@@ -13,7 +13,7 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var button: UIButton!
-    
+    @IBOutlet weak var myImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

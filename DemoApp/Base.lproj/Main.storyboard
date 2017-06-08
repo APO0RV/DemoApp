@@ -91,6 +91,10 @@
                                                         <action selector="buttonClicked:" destination="cmA-49-ctq" eventType="touchUpInside" id="GUf-XG-4qy"/>
                                                     </connections>
                                                 </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AXa-xs-iwm">
+                                                    <rect key="frame" x="242" y="93" width="60" height="60"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.3921568627" green="0.72549019609999998" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
@@ -98,6 +102,7 @@
                                             <outlet property="button" destination="mxr-1J-PsV" id="gNS-gP-TWF"/>
                                             <outlet property="firstNameTextField" destination="pnj-5e-qHI" id="6hb-ln-hVP"/>
                                             <outlet property="lastNameTextField" destination="5ml-JD-ccC" id="Bvh-Hi-AOM"/>
+                                            <outlet property="myImageView" destination="AXa-xs-iwm" id="amv-s4-7Qf"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell2" rowHeight="58" id="xiZ-Mk-qqg" customClass="AddTableViewCell" customModule="DemoApp" customModuleProvider="target">
