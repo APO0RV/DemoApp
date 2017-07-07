@@ -12,11 +12,19 @@ class ViewController: UIViewController {
 
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
+    @IBOutlet weak var cosmosView: CosmosView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         appDelegate.myStruct.firstName = "Apoorv"
         appDelegate.myStruct.lastName = "Srivastava"
+        
+        print(cosmosView.rating)
+        
+        cosmosView.didFinishTouchingCosmos = { rating in
+            print(rating)
+        }
 
     }
 

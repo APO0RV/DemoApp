@@ -1,19 +1,22 @@
 PODS:
-  - Alamofire (4.4.0)
+  - Alamofire (4.5.0)
   - AlamofireImage (3.2.0):
     - Alamofire (~> 4.1)
+  - Mapbox-iOS-SDK (3.6.0)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
   - AlamofireImage (~> 3.1)
+  - Mapbox-iOS-SDK (~> 3.6)
   - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
+  Mapbox-iOS-SDK: c911b1875a00f12bb74253b763ac483425bd4225
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 24d6477643e665139156a7e70ff23f377bef974d
+PODFILE CHECKSUM: e8570fbdd043f5805840bc3cc70a1382f66cd703
 
 COCOAPODS: 1.2.1
